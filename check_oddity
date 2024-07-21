@@ -1,0 +1,68 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+# Probably also solvable with n % 2, but this seems more fun
+def check_oddity(x:int)->bool:
+    t = x/2
+    if (t > x//2) and (t<(x//2)+1):
+        # if t is bigger than the floored  
+        return True # this means there is a remainder
+    return False
+
+if __name__ == '__main__':
+    n = int(input().strip())
+
+# if n is odd, print weird:
+
+    res = check_oddity(n)
+    if res:
+        print('Weird')
+    elif (n >= 2) and (n<=5):
+        print('Not Weird')
+        
+    elif (n>=6) and (n<=20):
+        print('Weird')
+        
+    elif (n>20):
+        print('Not Weird')
+-------
+
+VARIATION 2: 
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+# Probably also solvable with n % 2, but this seems more fun
+def check_oddity(x:int)->bool:
+    if x % 2 > 0:
+        return True # this means there is a remainder
+    return False
+
+if __name__ == '__main__':
+    n = int(input().strip())
+
+# if n is odd, print weird:
+
+    res = check_oddity(n)
+    if res:
+        print('Weird')
+    elif (n >= 2) and (n<=5):
+        print('Not Weird')
+        
+    elif (n>=6) and (n<=20):
+        print('Weird')
+        
+    elif (n>20):
+        print('Not Weird')
