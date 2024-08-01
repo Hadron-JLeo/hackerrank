@@ -15,3 +15,11 @@ Each row of this table indicates the id of a customer, their name, and the id of
 SELECT name
 FROM Customer
 WHERE (referee_id <> 2) or referee_id is NULL
+
+
+# This solution I came up with beats 70% of submits
+SELECT name FROM Customer
+WHERE referee_id is NULL
+UNION ALL
+SELECT name FROM Customer
+WHERE referee_id <> 2;
